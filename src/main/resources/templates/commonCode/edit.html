@@ -9,15 +9,15 @@
     </head>
     <body>
         <div class="container">
-            <h1>Input</h1>
-            <form action="#" th:action="@{/read}" method="GET">
+            <h1>edit</h1>
+            <form action="#" th:action="@{/commonCode/read}" method="POST">
                 <div class="form-group">
                     <label>Name</label>
-                    <input type="text" class="form-control" name="ORGANIZATION_NAME" placeholder="Please insert your name.">
+                    <input type="text" class="form-control" name="COMMON_NAME" placeholder="Please insert your name.">
                 </div>
                 <div class="form-group">
                     <label>E-mail</label>
-                    <input type="email" class="form-control" name="ORGANIZATION_EMAIL" placeholder="Please insert your name.">
+                    <input type="email" class="form-control" name="COMMON_EMAIL" placeholder="Please insert your name.">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
