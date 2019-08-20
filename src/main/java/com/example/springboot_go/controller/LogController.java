@@ -4,15 +4,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-
+@RequestMapping(value = "/log")
 public class LogController{
-    @RequestMapping(value = "/log/login")
-    public void LoginMethod(){
-    }
-    @RequestMapping(value = "/log/logout")
-    public void LogoutMethod(){
-    }
-    @RequestMapping(value = "/log/signup")
-    public void SignupMethod(){
+    @RequestMapping(value = {"/login", "logout", "signup"})
+    public void ActionMethod(){
     }
 }
