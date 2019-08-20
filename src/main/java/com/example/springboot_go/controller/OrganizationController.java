@@ -16,7 +16,7 @@ public class OrganizationController{
     }
     @RequestMapping(value = "/read", method = {RequestMethod.GET, RequestMethod.POST})
     public ModelAndView read(@RequestParam Map<String, Object> paramMap, ModelAndView modelandView){
-        String viewName = "organization/read";
+        String viewName = "/organization/";
         modelandView.setViewName(viewName);
         modelandView.addObject("paramMap", paramMap);
         return modelandView;
