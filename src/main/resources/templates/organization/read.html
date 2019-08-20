@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--html5-->
+
+<html xmlns:th="https://thymeleaf.org">
+    <head>
+        <script src="../../static/css/jquery.min.js" th:src="@{/css/jquery.min.js}"></script>
+        <script src="../../static/css/bootstrap.min.js" th:src="@{/css/bootstrap.min.js}"></script>
+        <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"></link>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Read</h1>
+            <form>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" name="ORGANIZATION_NAME" placeholder="Please insert your name.">
+                </div>
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" class="form-control" name="ORGANIZATION_EMAIL" placeholder="Please insert your name.">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
