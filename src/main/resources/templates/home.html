@@ -3,23 +3,28 @@
 
 <html xmlns:th="https://thymeleaf.org">
     <head>
-        <script src="../static/css/jquery.min.js"></script>
-        <script src="../static/css/bootstrap.min.js"></script>
-        <link href="../static/css/bootstrap.min.css"></link>
+        <script src="../static/css/jquery.min.js" th:src="@{/css/jquery.min.js}"></script>
+        <script src="../static/css/bootstrap.min.js" th:src="@{/css/bootstrap.min.js}"></script>
+        <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"></link>
     </head>
     <body>
+        <nav class="nav navbar navbar-expand-lg navbar-light bg-light">
+            <h1 class="navbar-brand">Home</h1>
+            <ul class="nav justify-content-end">
+            
+                <li class="nav-item"><a class="nav-link" href="./log/login.html" th:href="@{/log/login}">Log In</a></li>
+                <li class="nav-item"><a class="nav-link" href="./log/logout.html" th:href="@{/log/logout}">Log Out</a></li>
+                <li class="nav-item"><a class="nav-link" href="./log/signup.html" th:href="@{/log/signup}">Sign Up</a></li>
+            </ul>
+        </nav>
         <div class="container">
-            <h1>Home</h1>
-        <ul>
-            <a href="./memeber/list.html" th:href="@{/member/list}">Member List</a>
-            <li><a href="./log/login.html" th:href="@{/log/login}">Log In</a></li>
-            <li><a href="./log/logout.html" th:href="@{/log/logout}">Log Out</a></li>
-            <li><a href="./log/signup.html" th:href="@{/log/signup}">Sign Up</a></li>
-            <li><a href="./board/edit.html" th:href="@{/board/edit}">Edit</a></li>
-            <li><a href="./board/list.html" th:href="@{/board/list}">List</a></li>
-            <li><a href="./board/delete.html" th:href="@{/board/delete}">Delete</a></li>
-            <li><a href="./board/view.html" th:href="@{/board/view}">view</a></li>
+        <ul class="list-group">
+            <a class="list-group-item list-group-item-action" href="./board/edit.html" th:href="@{/board/edit}">Edit</a>
+            <a class="list-group-item list-group-item-action" href="./board/list.html" th:href="@{/board/list}">List</a>
+            <a class="list-group-item list-group-item-action" href="./board/delete.html" th:href="@{/board/delete}">Delete</a>
+            <a class="list-group-item list-group-item-action" href="./board/view.html" th:href="@{/board/view}">view</a>
         </ul>
         </div>
+
     </body>
 </html>
