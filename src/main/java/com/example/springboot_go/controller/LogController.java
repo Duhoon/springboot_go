@@ -6,16 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 
 public class LogController{
-    @RequestMapping(value = "/login")
-    public String LoginMethod(){
-        return "login";
+    @RequestMapping(value = "/log/login")
+    public void LoginMethod(){
     }
-    @RequestMapping(value = "/logout")
-    public String LogoutMethod(){
-        return "logout";
+    @RequestMapping(value = "/log/logout")
+    public void LogoutMethod(){
     }
-    @RequestMapping(value = "/signup")
-    public String SignupMethod(){
-        return "signup";
+    @RequestMapping(value = "/log/signup")
+    public void SignupMethod(){
     }
 }

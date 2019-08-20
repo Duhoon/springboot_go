@@ -6,19 +6,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 
 public class BoardController {
-    @RequestMapping(value = "/list")
-    public String ListMethod(){
-        return "list";
+    @RequestMapping(value = "/board/list")
+    public void ListMethod(){
     }
-    @RequestMapping(value = "/edit")
+    @RequestMapping(value = "/board/edit")
     public void EditMethod(){
     }
-    @RequestMapping(value = "/delete")
-    public String DeleteMethod(){
-        return "delete";
+    @RequestMapping(value = "/board/delete")
+    public void DeleteMethod(){
     }
-    @RequestMapping(value = "/view")
-    public String ViewMethod(){
-        return "view";
+    @RequestMapping(value = "/board/view")
+    public void ViewMethod(){
     }
 }
