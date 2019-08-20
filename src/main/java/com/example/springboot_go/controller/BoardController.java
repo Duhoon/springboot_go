@@ -9,18 +9,4 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class BoardController {
     @RequestMapping(value = {"/edit", "/delete", "/list", "/view"}, method = {RequestMethod.GET, RequestMethod.POST})
     public void actionMethod(){}
-    /*
-    @RequestMapping(value = "/list")
-    public void ListMethod(){
-    }
-    @RequestMapping(value = "/edit")
-    public void EditMethod(){
-    }
-    @RequestMapping(value = "/delete")
-    public void DeleteMethod(){
-    }
-    @RequestMapping(value = "/view")
-    public void ViewMethod(){
-    }
-    */
 }
