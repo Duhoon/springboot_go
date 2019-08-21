@@ -20,11 +20,6 @@ public class CommonCodeController {
         return "/commonCode/edit";
     }
 
-    @RequestMapping(value = "/commonCode/search")
-    public String ActionMethod2(){
-        return "/commonCode/list";
-    }
-
     @RequestMapping(value = "/commonCode/{action}", method = {RequestMethod.GET, RequestMethod.POST})
     /* 이 부분은 맵으로 넘기는 것
     public ModelAndView edit(@RequestParam Map<String, Object> paramMap, @PathVariable String action, ModelAndView modelandView){
@@ -43,6 +38,7 @@ public class CommonCodeController {
     public ModelAndView edit(@RequestParam Map<String, Object> paramMap, @PathVariable String action, ModelAndView modelandView){
         String viewName = "/commonCode/";
         List<Object> resultList = new ArrayList<Object>();
+        Map<String, Object> searchMap = new HashMap<String, Object>();
         if("list".equals(action)){
             viewName = viewName + action;
             Map<String, Object> data01 = new HashMap<String, Object>();
@@ -60,9 +56,11 @@ public class CommonCodeController {
             data03.put("COMMON_CODE_ID", 3);
             data03.put("DESCRIPTION", "Extra guy");
             resultList.add(data03);
+            searchMap = paramMap;
         }
         modelandView.setViewName(viewName);
         modelandView.addObject("resultList", resultList);
+        modelandView.addObject("searchMap", searchMap);
         return modelandView;
     }
 

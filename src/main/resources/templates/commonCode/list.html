@@ -7,19 +7,20 @@
         <link rel="stylesheet" href="../../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"></link>
     </head>
     <body>
-        <div class="nav navbar-light bg-light">
+        <div class="navbar navbar-light bg-light">
             <a href="#" class="navbar-brand">
                 List
             </a>
-        </div>
-        <div class="container">
-            <!--검색 바-->
             <form action="#" th:action="@{/commonCode/list}" method="GET">
-                <div class="form-group form-inline">
-                    <input class="form-control" name="serach">
+                <div class="form-inline">
+                    <input class="form-control" name="sch" th:value ="(${searchMap.isEmpty() ? ' ' : searchMap.sch})">
                     <button type="submit" class="btn btn-primary">Search</button>
                 </div>
             </form>
+        </div>
+        <div class="container">
+            <!--검색 바-->
+
             <table class="table">
                 <tr th:each="resultData: ${resultList}">
                     <td th:text=${resultData.COMMON_CODE_ID}></td>
