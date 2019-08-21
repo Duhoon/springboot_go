@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping
 public class CommonCodeController {
     @RequestMapping(value = "/commonCode/edit")
     public String ActionMethod(){

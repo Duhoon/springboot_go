@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--html5-->
+
+<html xmlns:th="https://thymeleaf.org">
+    <head>
+        <script src="../static/css/jquery.min.js" th:src="@{/css/jquery.min.js}"></script>
+        <script src="../static/css/bootstrap.min.js" th:src="@{/css/bootstrap.min.js}"></script>
+        <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"></link>
+    </head>
+    <body>
+        <div class="container">
+            <table class="table">
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                </tr>
+                <tr></tr>
+                    <td th:text=${resultMap.MEMBER_ID}></td>
+                    <td th:text=${resultMap.NAME}></td>
+                    <td th:text="(${resultMap.isEmpty() ? ' ' : resultMap.DESCRIPTION})"></td>
+            </table>
+            <form th:action="@{/member/read/}">
+                <input class="form-control" type="text" name="DESCRIPTION">
+                <button type="submit" class="btn btn-primary">PRESS</button>
+            </form>
+        </div>
+    </body>
+</html>
