@@ -21,4 +21,9 @@ public class MemberService{
         Object resultObject = dao.getObject(dataMap);
         return resultObject;
     }
+    /*
+    public Object getList(Object dataMap){
+        Object resultObject = dao.getObject
+    }
+    */
 }
