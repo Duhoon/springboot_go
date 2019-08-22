@@ -17,7 +17,7 @@
                 <tr></tr>
                     <td th:text=${resultMap.MEMBER_ID}></td>
                     <td th:text=${resultMap.NAME}></td>
-                    <td th:text="(${resultMap.isEmpty() ? ' ' : resultMap.DESCRIPTION})"></td>
+                    <td></td>
             </table>
             <form th:action="@{/member/read/}">
                 <input class="form-control" type="text" name="DESCRIPTION">
